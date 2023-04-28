@@ -6,6 +6,10 @@
 # that will contains all even numbers extracted from the numbers.txt. The second text file 
 # will be named odd.txt that will contains all odd numbers extracted from the numbers.txt.
 
+import pyfiglet
+font = pyfiglet.figlet_format("Number Extractor", font = "big", justify = "center")
+print (font)
+
 # Introduction to the program 
 name = input("Enter your username: ")
 print ("Hello!", name)
