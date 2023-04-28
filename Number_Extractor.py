@@ -7,13 +7,18 @@
 # will be named odd.txt that will contains all odd numbers extracted from the numbers.txt.
 
 import pyfiglet
+
+print ("=" * 100)
 font = pyfiglet.figlet_format("Number Extractor", font = "big", justify = "center")
 print (font)
 
 # Introduction to the program 
+print ("=" * 100)
 name = input("Enter your username: ")
+print ("=" * 100)
 print ("Hello!", name)
 print ("Today, We are going to extract numbers")
+print ("=" * 100)
 
 # ask user for input
 while True:
@@ -24,6 +29,7 @@ while True:
     else:
         number_inputs = int(user_input)
         break
+print ("=" * 100)
 
 numbers = []
 i = 0
@@ -38,6 +44,7 @@ while len(numbers) < number_inputs:
         i += 1
 
 # Time Delay
+print ("=" * 100)
 print ("Extracting...")
 import time
 time.sleep(5)
@@ -65,6 +72,7 @@ even_numbers_str = ' '.join(even_numbers)
 user_numbers_str = ' '.join(user_numbers)
 
 # display output
+print ("=" * 100)
 print ("User numbers: ", user_numbers_str)
 print ("Odd numbers: ", odd_numbers_str)
 print ("Even numbers: ", even_numbers_str)
@@ -73,3 +81,7 @@ print ("Even numbers: ", even_numbers_str)
 with open("odd.txt", "w") as odd_file, open("even.txt", "w") as even_file:
     odd_file.write("\n".join(odd_numbers))
     even_file.write("\n".join(even_numbers))
+
+print ("=" * 100)
+print ("Thank you for using this program.")
+print ("=" * 100)
