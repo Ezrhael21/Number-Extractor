@@ -36,8 +36,17 @@ with open("numbers.txt", "w") as number_file:
 with open("numbers.txt", "r") as input_file:
     user_numbers = input_file.read().strip().split(",")
 
-print (user_numbers)
 # loop through each number and add it to the appropriate list
+odd_numbers = []
+even_numbers = []
+for number in user_numbers:
+    if int(number) % 2 == 0:
+        even_numbers.append(number)
+    else:
+        odd_numbers.append(number)
+
+print (even_numbers)
+print (odd_numbers)
 # convert the list into string
 # display output
 # write odd and even numbers to files
