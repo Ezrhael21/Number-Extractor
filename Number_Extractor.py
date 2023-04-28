@@ -45,8 +45,15 @@ for number in user_numbers:
     else:
         odd_numbers.append(number)
 
-print (even_numbers)
-print (odd_numbers)
 # convert the list into string
+odd_numbers_str = ' '.join(odd_numbers)
+even_numbers_str = ' '.join(even_numbers)
+user_numbers_str = ' '.join(user_numbers)
+
+print (odd_numbers_str)
+print (even_numbers_str)
+print (user_numbers_str)
+
+
 # display output
 # write odd and even numbers to files
