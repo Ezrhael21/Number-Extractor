@@ -7,45 +7,46 @@
 # will be named odd.txt that will contains all odd numbers extracted from the numbers.txt.
 
 import pyfiglet
+import colorama
 
-print ("=" * 100)
+print (colorama.Fore.GREEN + "=" * 100)
 font = pyfiglet.figlet_format("Number Extractor", font = "big", justify = "center")
-print (font)
+print (colorama.Fore.YELLOW + font)
 
 # Introduction to the program 
-print ("=" * 100)
-name = input("Enter your username: ")
-print ("=" * 100)
-print ("Hello!", name)
-print ("Today, We are going to extract numbers")
-print ("=" * 100)
+print (colorama.Fore.GREEN + "=" * 100)
+name = input(colorama.Fore.BLUE + "Enter your username: ")
+print (colorama.Fore.GREEN + "=" * 100)
+print (colorama.Fore.WHITE + "Hello!", colorama.Fore.YELLOW + name)
+print (colorama.Fore.WHITE +"Today, We are going to extract numbers")
+print (colorama.Fore.GREEN + "=" * 100)
 
 # ask user for input
 while True:
-    user_input = input("How many numbers would you like to input? ")
+    user_input = input(colorama.Fore.BLUE + "How many numbers would you like to input? ")
     # looping to accept only valid number
     if not user_input.isnumeric():
-        print("Invalid input. Please enter a valid number.")
+        print(colorama.Fore.RED + "Invalid input. Please enter a valid number.")
     else:
         number_inputs = int(user_input)
         break
-print ("=" * 100)
+print (colorama.Fore.GREEN + "=" * 100)
 
 numbers = []
 i = 0
 while len(numbers) < number_inputs:
 # ask the user to enter the number
-    num = input("Enter number {} of {}: ".format(i+1, user_input))
+    num = input(colorama.Fore.WHITE + "Enter number {} of {}: ".format(i+1, user_input))
     # looping to accept only an integer number
     if not (num.isnumeric() or num.startswith('-') and num[1:].isnumeric()):
-        print("Invalid input. Please enter a number.")
+        print(colorama.Fore.RED + "Invalid input. Please enter a number.")
     else:
         numbers.append(num)
         i += 1
 
 # Time Delay
-print ("=" * 100)
-print ("Extracting...")
+print (colorama.Fore.GREEN + "=" * 100)
+print (colorama.Fore.WHITE + "Extracting...")
 import time
 time.sleep(5)
 
@@ -72,16 +73,16 @@ even_numbers_str = ' '.join(even_numbers)
 user_numbers_str = ' '.join(user_numbers)
 
 # display output
-print ("=" * 100)
-print ("User numbers: ", user_numbers_str)
-print ("Odd numbers: ", odd_numbers_str)
-print ("Even numbers: ", even_numbers_str)
+print (colorama.Fore.GREEN + "=" * 100)
+print (colorama.Fore.BLUE + "User numbers: ", colorama.Fore.WHITE + user_numbers_str)
+print (colorama.Fore.BLUE + "Odd numbers: ", colorama.Fore.WHITE + odd_numbers_str)
+print (colorama.Fore.BLUE + "Even numbers: ", colorama.Fore.WHITE + even_numbers_str)
 
 # write odd and even numbers to files
 with open("odd.txt", "w") as odd_file, open("even.txt", "w") as even_file:
     odd_file.write("\n".join(odd_numbers))
     even_file.write("\n".join(even_numbers))
 
-print ("=" * 100)
-print ("Thank you for using this program.")
-print ("=" * 100)
+print (colorama.Fore.GREEN + "=" * 100)
+print (colorama.Fore.YELLOW + "Thank you for using this program.")
+print (colorama.Fore.GREEN + "=" * 100)
