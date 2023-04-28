@@ -50,10 +50,9 @@ odd_numbers_str = ' '.join(odd_numbers)
 even_numbers_str = ' '.join(even_numbers)
 user_numbers_str = ' '.join(user_numbers)
 
-print (odd_numbers_str)
-print (even_numbers_str)
-print (user_numbers_str)
-
-
 # display output
+print ("User numbers: ", user_numbers_str)
+print ("Odd numbers: ", odd_numbers_str)
+print ("Even numbers: ", even_numbers_str)
+
 # write odd and even numbers to files
