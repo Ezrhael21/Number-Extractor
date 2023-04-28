@@ -56,3 +56,6 @@ print ("Odd numbers: ", odd_numbers_str)
 print ("Even numbers: ", even_numbers_str)
 
 # write odd and even numbers to files
+with open("odd.txt", "w") as odd_file, open("even.txt", "w") as even_file:
+    odd_file.write("\n".join(odd_numbers))
+    even_file.write("\n".join(even_numbers))
