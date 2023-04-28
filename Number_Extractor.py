@@ -33,6 +33,10 @@ with open("numbers.txt", "w") as number_file:
     number_file.write(",".join(numbers))
     
 # read the contents of the file
+with open("numbers.txt", "r") as input_file:
+    user_numbers = input_file.read().strip().split(",")
+
+print (user_numbers)
 # loop through each number and add it to the appropriate list
 # convert the list into string
 # display output
