@@ -16,8 +16,14 @@ while True:
         number_inputs = int(user_input)
         break
 
-
-print (number_inputs)
+numbers = []
+i = 0
+while len(numbers) < number_inputs:
+# ask the user to enter the number
+    num = input("Enter number {} of {}: ".format(i+1, user_input))
+    numbers.append(num)
+    i += 1
+    
 # write the numbers to the file
 # read the contents of the file
 # loop through each number and add it to the appropriate list
