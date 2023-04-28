@@ -6,6 +6,11 @@
 # that will contains all even numbers extracted from the numbers.txt. The second text file 
 # will be named odd.txt that will contains all odd numbers extracted from the numbers.txt.
 
+# Introduction to the program 
+name = input("Enter your username: ")
+print ("Hello!", name)
+print ("Today, We are going to extract numbers")
+
 # ask user for input
 while True:
     user_input = input("How many numbers would you like to input? ")
